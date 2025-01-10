@@ -109,10 +109,32 @@ namespace MapleStoryClientLauncher
             string port = txtPort.Text;
             int portNum;
 
-            // Validate IP
-            if (!System.Text.RegularExpressions.Regex.IsMatch(ip, @"^\d{1,3}(\.\d{1,3}){3}$"))
+            // Validate IP or domain
+            if (!System.Text.RegularExpressions.Regex.IsMatch(ip, @"^((\d{1,3}(\.\d{1,3}){3})|([a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)+))$"))
             {
-                MessageBox.Show("Invalid IP address format.", "Error",
+                MessageBox.Show("Invalid server address. Must be a valid IP or domain name.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Resolve domain to IP if needed
+            try
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(ip, @"^\d{1,3}(\.\d{1,3}){3}$"))
+                {
+                    var addresses = System.Net.Dns.GetHostAddresses(ip);
+                    if (addresses.Length == 0)
+                    {
+                        MessageBox.Show("Could not resolve domain name.", "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    ip = addresses[0].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error resolving domain name.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

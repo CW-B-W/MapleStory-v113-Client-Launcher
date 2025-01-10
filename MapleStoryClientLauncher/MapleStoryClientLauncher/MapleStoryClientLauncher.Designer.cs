@@ -34,54 +34,54 @@
             this.txtPort = new System.Windows.Forms.TextBox();
             this.btnLaunch = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            //
+            // 
             // label1
-            //
+            // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(14, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(36, 14);
             this.label1.TabIndex = 0;
-            this.label1.Text = "IP:";
-            //
+            this.label1.Text = "Host:";
+            // 
             // label2
-            //
+            // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(14, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(33, 14);
             this.label2.TabIndex = 1;
             this.label2.Text = "Port:";
-            //
+            // 
             // txtIP
-            //
-            this.txtIP.Location = new System.Drawing.Point(47, 12);
+            // 
+            this.txtIP.Location = new System.Drawing.Point(55, 12);
             this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(100, 20);
+            this.txtIP.Size = new System.Drawing.Size(116, 23);
             this.txtIP.TabIndex = 2;
-            //
+            // 
             // txtPort
-            //
-            this.txtPort.Location = new System.Drawing.Point(47, 38);
+            // 
+            this.txtPort.Location = new System.Drawing.Point(55, 38);
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(100, 20);
+            this.txtPort.Size = new System.Drawing.Size(116, 23);
             this.txtPort.TabIndex = 3;
-            //
+            // 
             // btnLaunch
-            //
-            this.btnLaunch.Location = new System.Drawing.Point(47, 64);
+            // 
+            this.btnLaunch.Location = new System.Drawing.Point(55, 64);
             this.btnLaunch.Name = "btnLaunch";
-            this.btnLaunch.Size = new System.Drawing.Size(100, 23);
+            this.btnLaunch.Size = new System.Drawing.Size(117, 23);
             this.btnLaunch.TabIndex = 4;
             this.btnLaunch.Text = "Launch";
             this.btnLaunch.UseVisualStyleBackColor = true;
             this.btnLaunch.Click += new System.EventHandler(this.btnLaunch_Click);
-            //
+            // 
             // MapleStoryClientLauncher
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(184, 111);
+            this.ClientSize = new System.Drawing.Size(215, 111);
             this.Controls.Add(this.btnLaunch);
             this.Controls.Add(this.txtPort);
             this.Controls.Add(this.txtIP);
