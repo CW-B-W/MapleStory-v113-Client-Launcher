@@ -106,6 +106,8 @@ namespace MapleStoryClientLauncher
         private void btnLaunch_Click(object sender, EventArgs e)
         {
             string ip = txtIP.Text;
+            string ipResolved = ip;
+
             string port = txtPort.Text;
             int portNum;
 
@@ -129,7 +131,7 @@ namespace MapleStoryClientLauncher
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    ip = addresses[0].ToString();
+                    ipResolved = addresses[0].ToString();
                 }
             }
             catch
@@ -151,7 +153,7 @@ namespace MapleStoryClientLauncher
             SaveSettings(ip, port);
 
             // Modify hosts file
-            ModifyHostsFile(ip);
+            ModifyHostsFile(ipResolved);
 
             // Launch MapleStory
             try
